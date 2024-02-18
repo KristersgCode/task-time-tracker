@@ -5,8 +5,8 @@ type RadioButtonProps = {
   label: string
   time: number
   checked: boolean
-  onClick: () => void
   options: string[]
+  onClick: () => void
 }
 
 export function RadioButton({
