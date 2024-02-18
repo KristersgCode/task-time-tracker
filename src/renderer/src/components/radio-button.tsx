@@ -1,3 +1,6 @@
+import DeleteIcon from '../assets/icons/delete.svg'
+import TimeIcon from '../assets/icons/time.svg'
+
 type RadioButtonProps = {
   label: string
   time: number
@@ -28,11 +31,11 @@ export function RadioButton({
         {label}
       </label>
       <div className="flex justify-center items-center ">
-        {/* <img src={require('../assets/icons/time.svg').default} alt="Time" /> */}
+        <img src={TimeIcon} alt="Time" />
         <label style={{ marginLeft: 16 }}>{time}</label>
         <label style={{ marginLeft: 16 }}>02.12.24</label>
         <div style={{ marginLeft: 16 }}>
-          {/* <img src={require('../assets/icons/delete.svg').default} alt="Time" /> */}
+          <img src={DeleteIcon} alt="Time" />
         </div>
       </div>
     </div>
