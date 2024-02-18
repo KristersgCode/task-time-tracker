@@ -7,7 +7,7 @@
     @apply h-full;
   }
 
-  html,
+  * html,
   body {
     @apply h-full;
     @apply select-none;
