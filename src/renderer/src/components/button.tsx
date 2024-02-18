@@ -15,7 +15,16 @@ export default function Button({ label, onClick }: ButtonProps) {
   }
 
   return (
-    <button onClick={onClick} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+    <button
+      onClick={onClick}
+      className="
+    flex
+    bg-green-600
+    p-2
+    text-white
+    rounded-md
+    "
+    >
       <img src={iconPaths[label]} alt={label} />
       {label}
     </button>

@@ -21,16 +21,17 @@ export function RadioButton({
       flex
       justify-between
       cursor-pointer
-      bg-red-200
+      bg-gray-200
       p-3
-      border-b-2
+      mb-2
+      rounded-xl
       "
     >
       <label>
         <input onChange={onClick} type="radio" value={'label'} checked={checked} />
         {label}
       </label>
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center  ">
         <img src={TimeIcon} alt="Time" />
         <label style={{ marginLeft: 16 }}>{time}</label>
         <label style={{ marginLeft: 16 }}>02.12.24</label>

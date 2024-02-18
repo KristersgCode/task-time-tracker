@@ -69,13 +69,17 @@ export function App() {
 
   const handleStop = () => {
     setAction('Stop')
-    // Optionally, handle stop logic similar to pause, or simply reset start time
     setStartingDate(null)
   }
   const [newOptionName, setNewOptionName] = useState('')
 
   return (
-    <div>
+    <div
+      className="flex
+    flex-col
+    items-center
+    "
+    >
       <Timer action={action} time={time} setTime={setTime} />
       <div
         style={{
@@ -84,12 +88,23 @@ export function App() {
       >
         <div>
           <input
-            className="bg-gray-100 p-2 w-full"
+            className="bg-gray-100 p-2 w-full rounded-md mb-3 border-none"
             type="text"
             value={newOptionName}
             onChange={(e) => setNewOptionName(e.target.value)}
           />
-          <button onClick={() => handleAddOption(newOptionName)}>Add Option</button>
+          <button
+            className="
+          bg-blue-500
+          text-white
+          p-2
+          rounded-md
+          w-full
+          "
+            onClick={() => handleAddOption(newOptionName)}
+          >
+            Add Option
+          </button>
         </div>
         <RadioButtonList
           optionTimes={optionTimes}
@@ -101,7 +116,7 @@ export function App() {
           options={options}
         />
       </div>
-      <div style={{ display: 'flex', gap: 12 }}>
+      <div className={'flex gap-3'}>
         <Button label="Play" onClick={handlePlay} />
         <Button label="Pause" onClick={handlePause} />
         <Button label="Stop" onClick={handleStop} />

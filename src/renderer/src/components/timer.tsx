@@ -44,13 +44,11 @@ export default function Timer({ action, time, setTime }: TimerProps) {
 
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 12
-      }}
+      className="
+      flex
+      flex-col
+      items-center
+      "
     >
       <h1>Timer</h1>
       <h1>{formatTime()}</h1>
